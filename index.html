@@ -16,18 +16,18 @@
       background: linear-gradient(135deg, #0d47a1, #42a5f5);
       color: #fff;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
+      align-items: center;
       padding: 20px;
+      font-size: 18px;
     }
 
     .container {
       background: rgba(0, 0, 50, 0.7);
       border-radius: 20px;
       padding: 35px;
-      width: 100%;
       max-width: 600px;
+      width: 100%;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       backdrop-filter: blur(5px);
       text-align: center;
@@ -63,14 +63,17 @@
     ul.mirror-list li {
       background: linear-gradient(to right, #1565c0, #42a5f5);
       margin-bottom: 15px;
-      padding: 14px 20px;
+      padding: 12px 16px;
       border-radius: 12px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 5px 10px rgba(0,0,0,0.3);
       transition: transform 0.2s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     ul.mirror-list li:hover {
@@ -81,14 +84,18 @@
       color: #fff;
       font-weight: bold;
       text-decoration: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     ul.mirror-list li .verified {
       background: #1976d2;
       color: white;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 50px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-left: 12px;
     }
 
     .download-image {
@@ -99,7 +106,6 @@
     }
 
     .extra-content {
-      width: 100%;
       max-width: 600px;
       background: rgba(0, 0, 40, 0.8);
       border-radius: 16px;
@@ -108,7 +114,7 @@
       font-size: 1.05rem;
       box-shadow: 0 6px 20px rgba(0,0,0,0.5);
       text-align: left;
-      line-height: 1.6;
+      line-height: 1.5;
       margin-bottom: 40px;
     }
 
@@ -124,24 +130,18 @@
     .providers {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
       justify-content: center;
-      margin: 20px 0 30px;
+      gap: 12px;
+      margin: 25px 0 30px;
     }
 
     .providers img {
-      width: 70px;
-      height: 70px;
+      height: 50px;
       object-fit: contain;
-      border-radius: 14px;
       background: transparent;
-      padding: 4px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      transition: transform 0.2s ease;
-    }
-
-    .providers img:hover {
-      transform: scale(1.05);
+      padding: 5px;
+      border-radius: 8px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
     }
 
     .footer {
@@ -150,32 +150,50 @@
       font-size: 0.85rem;
       text-align: center;
       line-height: 1.4;
-      margin-bottom: 30px;
       user-select: none;
+      margin-bottom: 30px;
+    }
+
+    .footer strong {
+      color: #cfdfff;
     }
 
     .footer a {
       color: #bbdefb;
       text-decoration: none;
       font-weight: 600;
+      margin: 0 6px;
     }
 
     .footer a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
+      .container, .extra-content {
+        padding: 25px 20px;
+      }
+
       h1 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
       }
 
       .extra-content h2 {
         font-size: 1.3rem;
       }
 
+      ul.mirror-list li {
+        font-size: 0.92rem;
+        padding: 10px 12px;
+      }
+
+      ul.mirror-list li .verified {
+        font-size: 0.75rem;
+        padding: 2px 8px;
+      }
+
       .providers img {
-        width: 55px;
-        height: 55px;
+        height: 40px;
       }
     }
   </style>
@@ -189,10 +207,22 @@
     </p>
 
     <ul class="mirror-list">
-      <li><a href="https://gamepo11.com" target="_blank">https://gamepo11.com</a><span class="verified">✔ Verified</span></li>
-      <li><a href="https://gamepo1.net" target="_blank">https://gamepo1.net</a><span class="verified">✔ Verified</span></li>
-      <li><a href="https://gamepo1.live" target="_blank">https://gamepo1.live</a><span class="verified">✔ Verified</span></li>
-      <li><a href="https://gamepo.live" target="_blank">https://gamepo.live</a><span class="verified">✔ Verified</span></li>
+      <li>
+        <a href="https://gamepo11.com" target="_blank">https://gamepo11.com</a>
+        <span class="verified">✔ Verified</span>
+      </li>
+      <li>
+        <a href="https://gamepo1.net" target="_blank">https://gamepo1.net</a>
+        <span class="verified">✔ Verified</span>
+      </li>
+      <li>
+        <a href="https://gamepo1.live" target="_blank">https://gamepo1.live</a>
+        <span class="verified">✔ Verified</span>
+      </li>
+      <li>
+        <a href="https://gamepo.live" target="_blank">https://gamepo.live</a>
+        <span class="verified">✔ Verified</span>
+      </li>
     </ul>
 
     <a href="https://file.gamepo.com/upload/apps/gamepo-110.apk" target="_blank">
@@ -202,18 +232,24 @@
 
   <div class="extra-content">
     <h2>A Wide Selection of Slots</h2>
-    <p>Enjoy a diverse range of slot games from around the world, featuring exciting betting options for every type of player.</p>
+    <p>
+      Enjoy a diverse range of slot games from around the world, featuring exciting betting options for every type of player.
+    </p>
 
     <h2>Fast Payouts</h2>
-    <p>We prioritise quick and reliable payments. Your money and winnings are handled with the utmost care and responsibility.</p>
+    <p>
+      We prioritise quick and reliable payments. Your money and winnings are handled with the utmost care and responsibility.
+    </p>
 
     <h2>We Care</h2>
-    <p>Friendly technical support, top-tier security, and partnerships with the best global game providers—because your experience matters.</p>
+    <p>
+      Friendly technical support, top-tier security, and partnerships with the best global game providers—because your experience matters.
+    </p>
 
     <div class="providers">
       <img src="yggdrasi.png" alt="Yggdrasil" />
-      <img src="AVIATRIX.png" alt="Aviatrix" />
-      <img src="BIGPOT.png" alt="Bigpot" />
+      <img src="AVIATRIX.png" alt="AVIATRIX" />
+      <img src="BIGPOT.png" alt="BIGPOT" />
       <img src="bti.png" alt="BTI" />
       <img src="evoplay.png" alt="Evoplay" />
       <img src="FC.png" alt="FC" />
@@ -221,12 +257,12 @@
       <img src="JDB.png" alt="JDB" />
       <img src="jili.png" alt="JILI" />
       <img src="Layer.png" alt="Layer" />
-      <img src="logosexy.png" alt="Sexy Gaming" />
-      <img src="paccc.png" alt="PACCC" />
-      <img src="pg84345.png" alt="PG Soft" />
+      <img src="logosexy.png" alt="Sexy" />
+      <img src="paccc.png" alt="Pacc" />
+      <img src="pg84345.png" alt="PG" />
       <img src="sigma.png" alt="Sigma" />
       <img src="tadda343.png" alt="Tadda" />
-      <img src="VPOWER.png" alt="VPOWER" />
+      <img src="VPOWER.png" alt="VPower" />
     </div>
 
     <h2>What is GamePo.co?</h2>
@@ -238,7 +274,8 @@
     <h2>Connect with Us</h2>
     <p>
       <a href="https://gamepo.co" target="_blank">Join Now</a> |
-      <a href="https://t.me/gamepoofficial" target="_blank">Telegram</a> |
+      <a href="https://t.me/gamepoofficial" target="_blank">Telegram</a><br />
+      Business: GamePo.co<br />
       <a href="https://direct.lc.chat/16937217/6" target="_blank">Support: 24/7 Customer Service</a><br />
       <a href="https://www.facebook.com/gamepo.official" target="_blank">Facebook</a> |
       <a href="https://t.me/gamepoofficial" target="_blank">Telegram</a> |
