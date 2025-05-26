@@ -1,2 +1,0 @@
-# GPlanding
-GPlanding
