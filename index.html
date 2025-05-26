@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Official Backup Sites List - Gamepo</title>
+  <meta name="description" content="Official backup sites list for Gamepo, featuring verified mirror links and download options." />
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -81,12 +82,17 @@
       text-decoration: none;
     }
 
+    ul.mirror-list li a:hover {
+      text-decoration: underline;
+    }
+
     ul.mirror-list li .verified {
       background: #1976d2;
       color: white;
       padding: 2px 8px;
       border-radius: 50px;
       font-size: 0.9rem;
+      user-select: none;
     }
 
     .download-image {
@@ -94,9 +100,15 @@
       height: auto;
       display: block;
       margin: 0 auto 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .download-image:hover {
+      transform: scale(1.05);
     }
 
-    /* 新增内容样式 */
+    /* Extra content style */
     .extra-content {
       max-width: 500px;
       background: rgba(0, 0, 40, 0.8);
@@ -133,6 +145,7 @@
       border-radius: 30px;
       font-size: 1rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      user-select: none;
     }
 
     .footer {
@@ -179,7 +192,7 @@
 </head>
 <body>
   <div class="container">
-    <img src="GamePologo.png" alt="Gamepo Logo" class="logo" />
+    <img src="GamePologo.png" alt="Gamepo Logo - Official Backup Sites" class="logo" role="img" />
     <h1>Official Backup Sites List – Gamepo</h1>
     <p class="desc">
       If you’re having trouble accessing the main site, try one of the backup sites listed below. You’ll always find a secure domain available in your area. Be sure to bookmark this page for easy access.
@@ -187,24 +200,24 @@
 
     <ul class="mirror-list">
       <li>
-        <a href="https://gamepo11.com" target="_blank">https://gamepo11.com</a>
-        <span class="verified">✔ Verified</span>
+        <a href="https://gamepo11.com" target="_blank" rel="noopener noreferrer">https://gamepo11.com</a>
+        <span class="verified" aria-label="Verified">✔ Verified</span>
       </li>
       <li>
-        <a href="https://gamepo1.net" target="_blank">https://gamepo1.net</a>
-        <span class="verified">✔ Verified</span>
+        <a href="https://gamepo1.net" target="_blank" rel="noopener noreferrer">https://gamepo1.net</a>
+        <span class="verified" aria-label="Verified">✔ Verified</span>
       </li>
       <li>
-        <a href="https://gamepo1.live" target="_blank">https://gamepo1.live</a>
-        <span class="verified">✔ Verified</span>
+        <a href="https://gamepo1.live" target="_blank" rel="noopener noreferrer">https://gamepo1.live</a>
+        <span class="verified" aria-label="Verified">✔ Verified</span>
       </li>
       <li>
-        <a href="https://gamepo.live" target="_blank">https://gamepo.live</a>
-        <span class="verified">✔ Verified</span>
+        <a href="https://gamepo.live" target="_blank" rel="noopener noreferrer">https://gamepo.live</a>
+        <span class="verified" aria-label="Verified">✔ Verified</span>
       </li>
     </ul>
 
-    <a href="https://file.gamepo.com/upload/apps/gamepo-110.apk" target="_blank">
+    <a href="https://file.gamepo.com/upload/apps/gamepo-110.apk" target="_blank" rel="noopener noreferrer">
       <img src="gamepo-Download.png" alt="Download Gamepo App" class="download-image" />
     </a>
   </div>
