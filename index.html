@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Official Backup Sites List - Gamepo</title>
-  <meta name="description" content="Official backup sites list for Gamepo, featuring verified mirror links and download options." />
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -82,17 +81,12 @@
       text-decoration: none;
     }
 
-    ul.mirror-list li a:hover {
-      text-decoration: underline;
-    }
-
     ul.mirror-list li .verified {
       background: #1976d2;
       color: white;
       padding: 2px 8px;
       border-radius: 50px;
       font-size: 0.9rem;
-      user-select: none;
     }
 
     .download-image {
@@ -100,15 +94,8 @@
       height: auto;
       display: block;
       margin: 0 auto 40px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-    .download-image:hover {
-      transform: scale(1.05);
     }
 
-    /* Extra content style */
     .extra-content {
       max-width: 500px;
       background: rgba(0, 0, 40, 0.8);
@@ -134,18 +121,24 @@
     .providers {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin: 15px 0 30px;
-      font-weight: bold;
-      color: #bbdefb;
+      gap: 12px;
+      justify-content: center;
+      margin: 20px 0 30px;
     }
-    .providers span {
-      background: #1976d2;
-      padding: 6px 12px;
-      border-radius: 30px;
-      font-size: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-      user-select: none;
+
+    .providers img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      padding: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .providers img:hover {
+      transform: scale(1.05);
     }
 
     .footer {
@@ -168,6 +161,7 @@
       font-weight: 600;
       margin: 0 6px;
     }
+
     .footer a:hover {
       text-decoration: underline;
     }
@@ -183,74 +177,61 @@
       .extra-content h2 {
         font-size: 1.3rem;
       }
-      .providers span {
-        font-size: 0.9rem;
-        padding: 5px 10px;
+      .providers img {
+        width: 60px;
+        height: 60px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="GamePologo.png" alt="Gamepo Logo - Official Backup Sites" class="logo" role="img" />
+    <img src="GamePologo.png" alt="Gamepo Logo" class="logo" />
     <h1>Official Backup Sites List – Gamepo</h1>
     <p class="desc">
       If you’re having trouble accessing the main site, try one of the backup sites listed below. You’ll always find a secure domain available in your area. Be sure to bookmark this page for easy access.
     </p>
 
     <ul class="mirror-list">
-      <li>
-        <a href="https://gamepo11.com" target="_blank" rel="noopener noreferrer">https://gamepo11.com</a>
-        <span class="verified" aria-label="Verified">✔ Verified</span>
-      </li>
-      <li>
-        <a href="https://gamepo1.net" target="_blank" rel="noopener noreferrer">https://gamepo1.net</a>
-        <span class="verified" aria-label="Verified">✔ Verified</span>
-      </li>
-      <li>
-        <a href="https://gamepo1.live" target="_blank" rel="noopener noreferrer">https://gamepo1.live</a>
-        <span class="verified" aria-label="Verified">✔ Verified</span>
-      </li>
-      <li>
-        <a href="https://gamepo.live" target="_blank" rel="noopener noreferrer">https://gamepo.live</a>
-        <span class="verified" aria-label="Verified">✔ Verified</span>
-      </li>
+      <li><a href="https://gamepo11.com" target="_blank">https://gamepo11.com</a><span class="verified">✔ Verified</span></li>
+      <li><a href="https://gamepo1.net" target="_blank">https://gamepo1.net</a><span class="verified">✔ Verified</span></li>
+      <li><a href="https://gamepo1.live" target="_blank">https://gamepo1.live</a><span class="verified">✔ Verified</span></li>
+      <li><a href="https://gamepo.live" target="_blank">https://gamepo.live</a><span class="verified">✔ Verified</span></li>
     </ul>
 
-    <a href="https://file.gamepo.com/upload/apps/gamepo-110.apk" target="_blank" rel="noopener noreferrer">
-      <img src="gamepo-Download.png" alt="Download Gamepo App" class="download-image" />
+    <a href="https://file.gamepo.com/upload/apps/gamepo-110.apk" target="_blank">
+      <img src="gamepoDownload.png" alt="Download Gamepo App" class="download-image" />
     </a>
   </div>
 
   <div class="extra-content">
     <h2>A Wide Selection of Slots</h2>
-    <p>
-      Enjoy a diverse range of slot games from around the world, featuring exciting betting options for every type of player.
-    </p>
+    <p>Enjoy a diverse range of slot games from around the world, featuring exciting betting options for every type of player.</p>
 
     <h2>Fast Payouts</h2>
-    <p>
-      We prioritise quick and reliable payments. Your money and winnings are handled with the utmost care and responsibility.
-    </p>
+    <p>We prioritise quick and reliable payments. Your money and winnings are handled with the utmost care and responsibility.</p>
 
     <h2>We Care</h2>
-    <p>
-      Friendly technical support, top-tier security, and partnerships with the best global game providers—because your experience matters.
-    </p>
+    <p>Friendly technical support, top-tier security, and partnerships with the best global game providers—because your experience matters.</p>
 
-    <div class="providers" aria-label="Game Providers">
-      <span>Provider 1</span>
-      <span>Provider 2</span>
-      <span>Provider 3</span>
-      <span>Provider 4</span>
-      <span>Provider 5</span>
-      <span>Provider 6</span>
-      <span>Provider 7</span>
-      <span>Provider 8</span>
-      <span>Provider 9</span>
-      <span>Provider 10</span>
-      <span>Provider 11</span>
-      <span>Provider 12</span>
+    <div class="providers">
+      <img src="yggdrasi.png" alt="Yggdrasil" />
+      <img src="AVIATRIX.png" alt="Aviatrix" />
+      <img src="BIGPOT.png" alt="Bigpot" />
+      <img src="bti.png" alt="BTI" />
+      <img src="evoplay.png" alt="Evoplay" />
+      <img src="FC.png" alt="FC" />
+      <img src="igs6789.png" alt="IGS" />
+      <img src="JDB.png" alt="JDB" />
+      <img src="jili.png" alt="JILI" />
+      <img src="Layer.png" alt="Layer" />
+      <img src="logosexy.png" alt="Sexy Gaming" />
+      <img src="paccc.png" alt="PACCC" />
+      <img src="pg84345.png" alt="PG Soft" />
+      <img src="sigma.png" alt="Sigma" />
+      <img src="tadda343.png" alt="Tadda" />
+      <img src="telegram.png" alt="Telegram" />
+      <img src="VPOWER.png" alt="VPOWER" />
     </div>
 
     <h2>What is GamePo.co?</h2>
