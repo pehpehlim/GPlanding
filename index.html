@@ -9,151 +9,163 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0d47a1;
+      background: linear-gradient(135deg, #0d47a1, #42a5f5);
       color: #fff;
-      padding: 0;
-      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      font-size: 18px;
     }
 
-    .main-wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 30px 20px;
-    }
-
-    .header {
-      text-align: center;
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      width: 100%;
       margin-bottom: 30px;
+      flex-wrap: wrap;
     }
 
-    .header img.logo {
-      max-width: 180px;
+    .top-text {
+      flex: 1 1 60%;
+      padding-right: 20px;
+    }
+
+    .logo {
+      max-width: 300px;
       border-radius: 12px;
-      margin-bottom: 15px;
+      flex: 1 1 40%;
     }
 
-    .header h1 {
+    h1 {
       font-family: 'Russo One', sans-serif;
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       color: #bbdefb;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 3px #000;
     }
 
     .desc {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 30px;
       font-size: 1.1rem;
       color: #e3f2fd;
     }
 
-    .download {
-      text-align: center;
+    .container {
+      background: rgba(0, 0, 50, 0.7);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      backdrop-filter: blur(5px);
       margin-bottom: 40px;
     }
 
-    .download img {
-      max-width: 320px;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    ul.mirror-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 30px 0;
     }
 
-    .mirror-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin: 30px auto 50px;
-      max-width: 800px;
-    }
-
-    .mirror-list a {
-      display: block;
+    ul.mirror-list li {
       background: linear-gradient(to right, #1565c0, #42a5f5);
-      padding: 14px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.25);
-      position: relative;
+      margin-bottom: 15px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
       transition: transform 0.2s;
+      flex-wrap: wrap;
     }
 
-    .mirror-list a:hover {
+    ul.mirror-list li:hover {
       transform: translateY(-3px);
     }
 
-    .mirror-list a::after {
-      content: '✔ Verified';
-      position: absolute;
-      top: 10px;
-      right: 15px;
+    ul.mirror-list li a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    ul.mirror-list li .verified {
       background: #1976d2;
+      color: white;
       padding: 4px 10px;
       border-radius: 50px;
-      font-size: 0.75rem;
+      font-size: 0.9rem;
+      margin-top: 5px;
     }
 
-    .section {
-      background: rgba(0, 0, 50, 0.7);
-      padding: 30px 25px;
+    .download-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .extra-content {
+      max-width: 900px;
+      background: rgba(0, 0, 40, 0.8);
       border-radius: 16px;
-      margin-bottom: 40px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    .section h2 {
-      font-family: 'Russo One', sans-serif;
-      color: #a6c8ff;
-      font-size: 1.5rem;
-      margin-bottom: 12px;
-      border-bottom: 2px solid #1976d2;
-      padding-bottom: 5px;
-    }
-
-    .section p {
-      line-height: 1.6;
+      padding: 30px;
       color: #d0e7ff;
       font-size: 1.05rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .extra-content h2 {
+      font-family: 'Russo One', sans-serif;
+      color: #a6c8ff;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      border-bottom: 2px solid #1976d2;
+      padding-bottom: 6px;
     }
 
     .providers {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       justify-content: center;
       margin: 20px 0 30px;
     }
 
     .providers img {
-      height: 45px;
-      padding: 6px;
+      height: 50px;
       border-radius: 10px;
       object-fit: contain;
-      background: rgba(255,255,255,0.05);
+      padding: 5px;
     }
 
     .social-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       justify-content: center;
-      margin-top: 25px;
+      margin-top: 20px;
     }
 
     .social-buttons a {
       background: transparent;
       border: 2px solid #90caf9;
       color: #e3f2fd;
+      text-decoration: none;
       padding: 10px 16px;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      min-width: 120px;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
       text-align: center;
-      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      min-width: 120px;
     }
 
     .social-buttons a:hover {
@@ -162,100 +174,112 @@
     }
 
     .footer {
-      text-align: center;
-      font-size: 0.85rem;
+      max-width: 800px;
       color: #9bb7db;
-      padding: 25px 0;
+      font-size: 0.85rem;
+      text-align: center;
+      line-height: 1.4;
+      margin: 30px auto;
+      user-select: none;
     }
 
-    @media (max-width: 480px) {
-      .mirror-list a::after {
-        top: unset;
-        bottom: 10px;
-        right: 10px;
+    @media (max-width: 768px) {
+      .top-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+      }
+
+      .top-text {
+        padding-right: 0;
+      }
+
+      .logo {
+        max-width: 200px;
+        margin-bottom: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="main-wrapper">
 
-    <div class="header">
-      <img src="GamePologo.png" alt="Gamepo Logo" class="logo" />
+  <div class="top-section">
+    <div class="top-text">
       <h1>Official Backup Sites List – Gamepo</h1>
       <p class="desc">
-        If you’re having trouble accessing the main site, try one of the backup sites listed below.
+        If you’re having trouble accessing the main site, try one of the backup sites listed below.<br>
         You’ll always find a secure domain available in your area. Be sure to bookmark this page for easy access.
       </p>
     </div>
-
-    <div class="download">
-      <a href="https://file.gamepo.com/upload/apps/gamepo-110.apk" target="_blank">
-        <img src="gamepoDownload.png" alt="Download Gamepo App" />
-      </a>
-    </div>
-
-    <div class="mirror-list">
-      <a href="https://gamepo11.com" target="_blank">https://gamepo11.com</a>
-      <a href="https://gamepo1.net" target="_blank">https://gamepo1.net</a>
-      <a href="https://gamepo1.live" target="_blank">https://gamepo1.live</a>
-      <a href="https://gamepo.co" target="_blank">https://gamepo.co</a>
-    </div>
-
-    <div class="section">
-      <h2>A Wide Selection of Slots</h2>
-      <p>Enjoy a diverse range of slot games from around the world, featuring exciting betting options for every type of player.</p>
-
-      <h2>Fast Payouts</h2>
-      <p>We prioritise quick and reliable payments. Your money and winnings are handled with the utmost care and responsibility.</p>
-
-      <h2>We Care</h2>
-      <p>Friendly technical support, top-tier security, and partnerships with the best global game providers—because your experience matters.</p>
-
-      <div class="providers">
-        <img src="yggdrasi.png" alt="Yggdrasi">
-        <img src="AVIATRIX.png" alt="AVIATRIX">
-        <img src="BIGPOT.png" alt="BIGPOT">
-        <img src="bti.png" alt="bti">
-        <img src="evoplay.png" alt="evoplay">
-        <img src="FC.png" alt="FC">
-        <img src="igs6789.png" alt="igs6789">
-        <img src="JDB.png" alt="JDB">
-        <img src="jili.png" alt="jili">
-        <img src="Layer.png" alt="Layer">
-        <img src="logosexy.png" alt="logosexy">
-        <img src="paccc.png" alt="paccc">
-        <img src="pg84345.png" alt="pg84345">
-        <img src="sigma.png" alt="sigma">
-        <img src="tadda343.png" alt="tadda343">
-        <img src="VPOWER.png" alt="VPOWER">
-      </div>
-
-      <h2>What is GamePo.co?</h2>
-      <p>GamePo.co is a community-based official site offering the best online casino experience to its players!<br />
-      At GamePo.co, we believe that modern technology will forever transform the online gambling industry.</p>
-
-      <h2>Connect with Us</h2>
-      <div class="social-buttons">
-        <a href="https://gamepo.co" target="_blank">Join Now</a>
-        <a href="https://t.me/gamepoofficial" target="_blank">Telegram</a>
-        <a href="https://www.instagram.com/gamepo.officialac?igsh=MWV5bjczMDg1dDEz&utm_source=qr" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/gamepo.official" target="_blank">Facebook</a>
-        <a href="https://direct.lc.chat/16937217/6" target="_blank">24H-Support</a>
-      </div>
-
-      <h2>License</h2>
-      <p>
-        <strong>GamePo.co is operated by BlockDance B.V.</strong><br />
-        Commercially registered in Curaçao under number 158182,<br />
-        Located at Emancipatie Boulevard Dominico F. "Don" Martina 31, Curaçao.<br />
-        Licensed and regulated under sub-license CIL in accordance with Master Gaming License #5536/JAZ.
-      </p>
-    </div>
-
-    <footer class="footer">
-      ©2025 GamePo. All rights reserved.
-    </footer>
+    <img src="GamePologo.png" alt="Gamepo Logo" class="logo" />
   </div>
+
+  <div class="container">
+    <ul class="mirror-list">
+      <li><a href="https://gamepo11.com" target="_blank">https://gamepo11.com</a><span class="verified">✔ Verified</span></li>
+      <li><a href="https://gamepo1.net" target="_blank">https://gamepo1.net</a><span class="verified">✔ Verified</span></li>
+      <li><a href="https://gamepo1.live" target="_blank">https://gamepo1.live</a><span class="verified">✔ Verified</span></li>
+      <li><a href="https://gamepo.co" target="_blank">https://gamepo.co</a><span class="verified">✔ Verified</span></li>
+    </ul>
+
+    <a href="https://file.gamepo.com/upload/apps/gamepo-110.apk" target="_blank">
+      <img src="gamepoDownload.png" alt="Download Gamepo App" class="download-image" />
+    </a>
+  </div>
+
+  <div class="extra-content">
+    <h2>A Wide Selection of Slots</h2>
+    <p>Enjoy a diverse range of slot games from around the world, featuring exciting betting options for every type of player.</p>
+
+    <h2>Fast Payouts</h2>
+    <p>We prioritise quick and reliable payments. Your money and winnings are handled with the utmost care and responsibility.</p>
+
+    <h2>We Care</h2>
+    <p>Friendly technical support, top-tier security, and partnerships with the best global game providers—because your experience matters.</p>
+
+    <div class="providers">
+      <img src="yggdrasi.png" alt="Yggdrasi">
+      <img src="AVIATRIX.png" alt="AVIATRIX">
+      <img src="BIGPOT.png" alt="BIGPOT">
+      <img src="bti.png" alt="bti">
+      <img src="evoplay.png" alt="evoplay">
+      <img src="FC.png" alt="FC">
+      <img src="igs6789.png" alt="igs6789">
+      <img src="JDB.png" alt="JDB">
+      <img src="jili.png" alt="jili">
+      <img src="Layer.png" alt="Layer">
+      <img src="logosexy.png" alt="logosexy">
+      <img src="paccc.png" alt="paccc">
+      <img src="pg84345.png" alt="pg84345">
+      <img src="sigma.png" alt="sigma">
+      <img src="tadda343.png" alt="tadda343">
+      <img src="VPOWER.png" alt="VPOWER">
+    </div>
+
+    <h2>What is GamePo.co?</h2>
+    <p>GamePo.co is a community-based official site offering the best online casino experience to its players!<br />At GamePo.co, we believe that modern technology will forever transform the online gambling industry.</p>
+
+    <h2>Connect with Us</h2>
+    <div class="social-buttons">
+      <a href="https://gamepo.co" target="_blank">Join Now</a>
+      <a href="https://t.me/gamepoofficial" target="_blank">Telegram</a>
+      <a href="https://www.instagram.com/gamepo.officialac?igsh=MWV5bjczMDg1dDEz&utm_source=qr" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/gamepo.official" target="_blank">Facebook</a>
+      <a href="https://direct.lc.chat/16937217/6" target="_blank">24H-Support</a>
+    </div>
+
+    <h2>License</h2>
+    <p>
+      <strong>GamePo.co is operated by BlockDance B.V.</strong><br />
+      Commercially registered in Curaçao under number 158182,<br />
+      Located at Emancipatie Boulevard Dominico F. "Don" Martina 31, Curaçao.<br />
+      Licensed and regulated under sub-license CIL in accordance with Master Gaming License #5536/JAZ.
+    </p>
+  </div>
+
+  <footer class="footer">
+    ©2025 GamePo. All rights reserved.
+  </footer>
+
 </body>
 </html>
