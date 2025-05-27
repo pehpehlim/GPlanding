@@ -1,285 +1,875 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Official Backup Sites List - Gamepo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0d47a1, #42a5f5);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      font-size: 18px;
-    }
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Official Backup Sites List - Gamepo</title>
+    <link id="favicon" rel="icon" href="./img/favicon.png">
+    <!-- Open Graph 元标签 for Telegram 分享 -->
+    <meta property="og:title" content="Official Backup Sites List - Gamepo">
+    <meta property="og:description" content="Find the official mirror site of GamePo for safe and fast access to the best online casino experience!">
+    <meta property="og:image" content="img/og.png"> <!-- Telegram 分享缩略图 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gamepo.com">
+    <style>
+        html {
+            -ms-scroll-chaining: none;
+            overscroll-behavior: contain;
+            scrollbar-width: thin;
+            touch-action: manipulation;
+            width: 100%;
+            font-size: 16px
+        }
 
-    .top-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1000px;
-      width: 100%;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-    }
+        body, html {
+            padding: 0;
+            margin: 0;
+            background-color: #17181C;
+            font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+        }
 
-    .top-text {
-      flex: 1 1 60%;
-      padding-right: 20px;
-    }
+        body {
+            overflow-anchor: none;
+            margin: 0;
+            width: 100%;
+            overflow-x: hidden;
+            -ms-scroll-chaining: none;
+            overscroll-behavior: contain;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+            scrollbar-width: thin;
+            scrollbar-color: #17181c transparent
+        }
 
-    .logo {
-      max-width: 300px;
-      border-radius: 12px;
-      flex: 1 1 40%;
-    }
+        a {
+            color: inherit;
+            text-decoration: none
+        }
 
-    h1 {
-      font-family: 'Russo One', sans-serif;
-      font-size: 2.5rem;
-      color: #bbdefb;
-      margin-bottom: 15px;
-      text-shadow: 1px 1px 3px #000;
-    }
+        * {
+            box-sizing: border-box
+        }
 
-    .desc {
-      font-size: 1.1rem;
-      color: #e3f2fd;
-    }
+        p {
+            margin: 0;
+        }
 
-    .container {
-      background: rgba(0, 0, 50, 0.7);
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 800px;
-      width: 100%;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      backdrop-filter: blur(5px);
-      margin-bottom: 40px;
-    }
+        .wrap {
+            margin-top: 20px;
+        }
 
-    ul.mirror-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 30px 0;
-    }
+        .header {
+            display: flex;
+            width: 90%;
+            height: 72px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4%;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
 
-    ul.mirror-list li {
-      background: linear-gradient(to right, #1565c0, #42a5f5);
-      margin-bottom: 15px;
-      padding: 14px 20px;
-      border-radius: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-      flex-wrap: wrap;
-    }
+        .header_logo {
+            height: 56px;
+            width: auto;
+            cursor: pointer;
+        }
 
-    ul.mirror-list li:hover {
-      transform: translateY(-3px);
-    }
+        .header_text {
+            line-height: 56px;
+            color: #525C67D6;
+            font-size: 14px;
+        }
 
-    ul.mirror-list li a {
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      word-break: break-word;
-    }
+        /*** main_top start ***/
+        .main_top {
+            display: flex;
+            align-items: center;
+            height: 720px;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 4%;
+        }
 
-    ul.mirror-list li .verified {
-      background: #1976d2;
-      color: white;
-      padding: 4px 10px;
-      border-radius: 50px;
-      font-size: 0.9rem;
-      margin-top: 5px;
-    }
+        .top_left {
+            width: 42%;
+            padding-left: 6%;
+        }
 
-    .download-image {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 20px;
-    }
+        .top_title {
+            color: #F4720B;
+            font-size: 28px; /* 字体大小从 44px 减小到 32px */
+        }
 
-    .extra-content {
-      max-width: 900px;
-      background: rgba(0, 0, 40, 0.8);
-      border-radius: 16px;
-      padding: 30px;
-      color: #d0e7ff;
-      font-size: 1.05rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-      text-align: left;
-      line-height: 1.6;
-    }
+        .top_desc {
+            margin-top: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.57;
+            color: #525C67;
+            max-width: 440px;
+        }
 
-    .extra-content h2 {
-      font-family: 'Russo One', sans-serif;
-      color: #a6c8ff;
-      margin-bottom: 15px;
-      font-size: 1.6rem;
-      border-bottom: 2px solid #1976d2;
-      padding-bottom: 6px;
-    }
+        .top_link {
+            display: flex;
+            margin-top: 24px;
+            align-items: center;
+        }
 
-    .providers {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin: 20px 0 30px;
-    }
+        .link_content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 216px;
+            height: 52px;
+            border-radius: 26px;
+            color: #fff;
+            padding: 0 16px 0 12px;
+            cursor: pointer;
+            font-weight: 700;
+        }
 
-    .providers img {
-      height: 50px;
-      border-radius: 10px;
-      object-fit: contain;
-      padding: 5px;
-    }
+        .link_circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+        }
 
-    .social-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 20px;
-    }
+        .link_circle span {
+            display: block;
+            color: #86e100;
+            text-align: center;
+            line-height: 1.4em;
+        }
 
-    .social-buttons a {
-      background: transparent;
-      border: 2px solid #90caf9;
-      color: #e3f2fd;
-      text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.2s ease-in-out;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      min-width: 120px;
-    }
+        .link_verify {
+            color: #f4720b;
+            margin-left: 1rem;
+            font-size: 14px;
+        }
 
-    .social-buttons a:hover {
-      background: #90caf9;
-      color: #0d47a1;
-    }
+        .top_links {
+            margin-top: 32px;
+            width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    .footer {
-      max-width: 800px;
-      color: #9bb7db;
-      font-size: 0.85rem;
-      text-align: center;
-      line-height: 1.4;
-      margin: 30px auto;
-      user-select: none;
-    }
+        .links_content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 200px; /* 增加宽度以容纳更长文字 */
+            height: 34px;
+            border-radius: 5px;
+            background-color: #1f2027;
+            margin-right: 12px;
+            margin-bottom: 12px;
+            color: #f4720b;
+            cursor: pointer;
+        }
 
-    @media (max-width: 768px) {
-      .top-section {
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-      }
+        .links_img {
+            width: 38px;
+            height: 100%;
+            border-radius: 5px;
+            box-shadow: inset 0 0 5px 0 rgba(96,220,29,.06);
+            background-color: rgba(77,163,31,.02);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-      .top-text {
-        padding-right: 0;
-      }
+        .links_img img {
+            width: 24px; /* 限制图片宽度，包括 apkdownload.png */
+            height: 24px; /* 限制图片高度 */
+            object-fit: contain; /* 确保图片适应容器 */
+        }
 
-      .logo {
-        max-width: 200px;
-        margin-bottom: 20px;
-      }
-    }
-  </style>
+        .links_text {
+            flex: 1 1;
+            text-align: center;
+            font-size: 12px; /* 减小字体大小 */
+            white-space: nowrap; /* 防止文字换行 */
+        }
+
+        .top_right {
+            width: 58%;
+            height: auto;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .right_img {
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top_right img {
+            max-width: 500px; /* 限制图片最大宽度为 500px */
+            height: auto; /* 保持图片比例 */
+        }
+
+        /*** main_top end ***/
+
+        /** main_center start */
+        .main_center {
+            width: 100%;
+            height: 222px;
+            background-color: #24262c;
+        }
+
+        .center_content {
+            width: 90%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .center_item {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 33%;
+            justify-content: center;
+        }
+
+        .item_img {
+            width: 48px;
+            height: auto;
+        }
+
+        .item_text {
+            margin-left: 24px;
+        }
+
+        .text_title {
+            font-size: 17px;
+            color: #fff;
+            line-height: 18px;
+            max-width: 250px;
+        }
+
+        .text_desc {
+            font-size: 13px;
+            line-height: 20px;
+            color: #99A4B099;
+            margin-top: 8px;
+        }
+
+        /** main_center end */
+
+        /** main_footer start */
+        .main_footer {
+            width: 100%;
+            height: auto; /* 允许高度自适应 */
+            background-color: rgba(0,0,0,.1);
+        }
+
+        .mf_content {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap; /* 支持多列排列 */
+            align-items: center;
+            justify-content: center;
+            max-width: 1440px;
+            margin: 0 auto;
+            gap: 1rem; /* 图标间距 */
+            padding: 1rem;
+        }
+
+        .mf_content img {
+            width: 100px; /* 固定宽度 */
+            height: auto; /* 保持比例 */
+            object-fit: contain; /* 确保图片适应容器 */
+        }
+
+        /** main_footer end */
+
+        /*** footer start */
+        .footer_top {
+            width: 100%;
+            padding: 0 4%;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .footer_links {
+            width: 100%;
+            height: 262px;
+            border-bottom: 1px solid #26252b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .links_1 {
+            width: 50%;
+            border-right: 1px solid #26252b;
+        }
+
+        .links_1 img {
+            display: block;
+            height: 36px;
+            width: auto;
+        }
+
+        .links_1 p {
+            width: 90%;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #525c67;
+            line-height: 18px;
+        }
+
+        .links_2 {
+            width: 20%;
+           公有云
+            margin-left: 5%;
+        }
+
+        .links_2 a {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 2.2;
+            color: #c0cbd5;
+        }
+
+        .links_3 {
+            width: 25%;
+        }
+
+        .links3_business {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            line-height: 2.2;
+        }
+
+        .links3_business span {
+            color: #525c67;
+        }
+
+        .links3_business a {
+            color: #f4720b;
+            margin-left: 4px;
+        }
+
+        .links3_icon {
+            width: 100%;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .links3_icon a {
+            background-color: #24262c;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 16px;
+        }
+
+        .footer_center {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            border-bottom: 1px solid #26252b;
+            height: 140px;
+        }
+
+        .center_1 {
+            width: 56%;
+            display: flex;
+            border-right: 1px solid #26252b;
+        }
+
+        .center_1 div {
+            width: 80%;
+            color: #525C67;
+            font-size: 12px;
+            margin-left: 30px;
+        }
+
+        .center_2 {
+            margin-left: 5%;
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer_lic {
+            text-align: center;
+            color: #525C6799;
+            height: 72px;
+            line-height: 72px;
+        }
+
+        /*** footer end */
+
+        @media screen and (max-width: 678px) {
+            .wrap {
+                margin-top: 1rem;
+            }
+
+            .header {
+                height: 4rem;
+                padding: 0 1rem;
+                flex-direction: column;
+            }
+
+            .header_logo {
+                height: 3.2rem;
+                width: auto;
+            }
+
+            .header_text {
+                line-height: 0;
+                margin-left: 0.5rem;
+            }
+
+            .main_top {
+                padding: 0 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .top_left {
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+            }
+
+            /*** main_top start ***/
+            .top_title {
+                font-size: 1.5rem; /* 移动端字体大小从 2rem 减小到 1.5rem */
+                line-height: 2rem;
+            }
+
+            .top_link {
+                margin-top: 0.85rem;
+            }
+
+            .top_left {
+                padding-left: 0;
+            }
+
+            .top_links {
+                margin-top: 1.5rem;
+                width: 92%;
+                flex-direction: column;
+            }
+
+            .links_a {
+                width: 100%;
+            }
+
+            .links_content {
+                width: 100%;
+                margin-bottom: 2rem;
+                height: 4rem; /* 移动端保持一致高度 */
+            }
+
+            .links_img img {
+                width: 24px; /* 移动端图片尺寸 */
+                height: 24px;
+                object-fit: contain;
+            }
+
+            .links_text {
+                font-size: 18px; /* 移动端字体大小一致 */
+                white-space: nowrap; /* 防止换行 */
+            }
+
+            .top_right {
+                order: 1;
+                width: 100%;
+            }
+
+            .top_right img {
+                max-width: 300px; /* 移动端限制图片最大宽度为 300px */
+                height: auto;
+                margin-left: -1.5rem;
+            }
+
+            /*** main_top end ***/
+
+            /** main_center start */
+            .main_center {
+                height: auto;
+                padding: 0 1rem;
+            }
+
+            .center_content {
+                flex-direction: column;
+                padding: 1.5rem 0;
+            }
+
+            .center_item {
+                width: 100%;
+                padding: 1rem 0;
+            }
+
+            .item_img {
+                width: 3rem;
+            }
+
+            /** main_center end */
+
+            /** main_footer start */
+            .main_footer {
+                margin-top: 0;
+                height: auto;
+            }
+
+            .mf_content {
+                width: 100%;
+                flex-wrap: wrap; /* 移动端支持多列 */
+                justify-content: center; /* 居中排列 */
+                padding: 1rem;
+                gap: 0.75rem; /* 移动端间距 */
+            }
+
+            .mf_content img {
+                width: 80px; /* 移动端图标宽度 */
+                height: auto;
+                margin: 0; /* 移除多余边距 */
+                object-fit: contain;
+            }
+
+            /** main_footer end */
+
+            /*** footer start */
+            .footer_top {
+                padding: 0 2rem;
+            }
+
+            .footer_links {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .links_1 {
+                width: 100%;
+                border-right: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 1.6rem;
+            }
+
+            .links_2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                flex-wrap: wrap;
+                margin-top: 0.75rem;
+                margin-left: 0;
+                min-width: 16rem;
+            }
+
+            .links_2 a {
+                white-space: nowrap;
+                margin: 0 0.75rem;
+            }
+
+            .links_3 {
+                width: 100%;
+                margin-top: 0.8rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .links3_business {
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+                line-height: 2.2;
+            }
+
+            .links3_icon {
+                width: 100%;
+                margin-bottom: 1.8rem;
+                justify-content: center;
+            }
+
+            .links3_icon a {
+                margin-bottom: 0;
+            }
+
+            .footer_center {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .center_1 {
+                width: 100%;
+                margin-top: 1rem;
+                border-right: 0;
+            }
+
+            .center_2 {
+                width: 100%;
+                margin: 2rem 0;
+            }
+
+            .text_desc {
+                max-width: 20rem;
+            }
+
+            /*** footer end */
+        }
+
+        @media screen and (max-width: 992px) {
+            .links_text {
+                font-size: 12px; /* 调整字体大小 */
+                white-space: nowrap; /* 防止换行 */
+            }
+
+            .main_top {
+                flex-direction: column;
+                height: auto;
+                margin-bottom: 2rem;
+            }
+
+            .top_left {
+                order: 2;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .top_title {
+                text-align: center;
+            }
+
+            .top_links {
+                margin-top: 1.5rem;
+                width: 92%;
+                flex-direction: column;
+            }
+
+            .links_a {
+                width: 100%;
+            }
+
+            .links_content {
+                width: 100%;
+                margin-bottom: 2rem;
+                height: 4rem;
+            }
+        }
+    </style>
+    <script>
+        function jump() {
+            const urlArr = [
+                'https://km777.club',
+                'https://km777.win',
+                'https://km777.vip',
+                'https://km777.poker',
+            ];
+            const getRandom = function(arr) {
+                let index = parseInt(Math.random() * arr.length);
+                return arr[index];
+            };
+            let a = document.createElement('a');
+            a.href = getRandom(urlArr);
+            a.click();
+            a = null;
+        }
+
+        if (['km777.net', 'www.km777.net'].includes(location.host)) {
+            jump();
+        }
+    </script>
 </head>
 <body>
-
-  <div class="top-section">
-    <div class="top-text">
-      <h1>Official Backup Sites List – Gamepo</h1>
-      <p class="desc">
-        If you’re having trouble accessing the main site, try one of the backup sites listed below.<br>
-        You’ll always find a secure domain available in your area. Be sure to bookmark this page for easy access.
-      </p>
+    <div class="wrap">
+        <main>
+            <div class="main_top">
+                <div class="top_left">
+                    <div class="top_title">
+                        <p>GAMEPO.COM</p>
+                        <p>Official Backup Sites List</p>
+                    </div>
+                    <div class="top_desc">
+                        <p>If you’re having trouble accessing the main site, try one of the backup sites listed below. You’ll always find a secure domain available in your area. Be sure to bookmark this page for easy access.</p>
+                    </div>
+                    <div class="top_link">
+                        <a href="https://gamepo.co" target="_blank">
+                            <div class="link_content">
+                                <span>gamepo.co</span>
+                                <div class="link_circle">
+                                    <span>✔</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="link_verify">Verified</a>
+                    </div>
+                    <div class="top_links">
+                        <a href="https://gamepo11.com" target="_blank" class="links_a">
+                            <div class="links_content">
+                                <div class="links_img">
+                                    <img src="link.png" alt="">
+                                </div>
+                                <div class="links_text">gamepo11.com</div>
+                            </div>
+                        </a>                    
+                        <a href="https://gamepo1.net" target="_blank" class="links_a">
+                            <div class="links_content">
+                                <div class="links_img">
+                                    <img src="link.png" alt="">
+                                </div>
+                                <div class="links_text">gamepo1.net</div>
+                            </div>
+                        </a>
+                        <a href="https://gamepo1.live" target="_blank" class="links_a">
+                            <div class="links_content">
+                                <div class="links_img">
+                                    <img src="link.png" alt="">
+                                </div>
+                                <div class="links_text">gamepo1.live</div>
+                            </div>
+                        </a>
+                        <a href="https://file.gamepo.com/upload/apps/gamepo-110.apk" target="_blank" class="links_a">
+                            <div class="links_content">
+                                <div class="links_img">
+                                    <img src="apkdownload.png" alt="">
+                                </div>
+                                <div class="links_text">Download Gamepo App</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="top_right">
+                    <div class="right_img">
+                        <img src="GamePologo.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="main_center">
+                <div class="center_content">
+                    <div class="center_item">
+                        <img src="img/777.png" alt="" class="item_img">
+                        <div class="item_text">
+                            <p class="text_title">Various Slot Options</p>
+                            <p class="text_desc">A wide range of slot games from around the world is available, featuring many exciting betting options.</p>
+                        </div>
+                    </div>
+                    <div class="center_item">
+                        <img src="img/pay.png" alt="" class="item_img">
+                        <div class="item_text">
+                            <p class="text_title">Fast & Secure Payouts</p>
+                            <p class="text_desc">We prioritize quick and guaranteed transactions, handling your funds and winnings with complete care and responsibility.</p>
+                        </div>
+                    </div>
+                    <div class="center_item">
+                        <img src="img/about.png" alt="" class="item_img">
+                        <div class="item_text">
+                            <p class="text_title">We Care</p>
+                            <p class="text_desc">Enjoy friendly technical support, top-tier security, and a curated selection of the best game providers from around the globe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_footer">
+                <div class="mf_content">
+                     <img src="yggdrasi.png" alt="Yggdrasi">
+                     <img src="AVIATRIX.png" alt="AVIATRIX">
+                     <img src="BIGPOT.png" alt="BIGPOT">
+                     <img src="bti.png" alt="bti">
+                     <img src="evoplay.png" alt="evoplay">
+                     <img src="FC.png" alt="FC">
+                     <img src="igs6789.png" alt="igs6789">
+                     <img src="JDB.png" alt="JDB">
+                     <img src="jili.png" alt="jili">
+                     <img src="Layer.png" alt="Layer">
+                     <img src="logosexy.png" alt="logosexy">
+                     <img src="paccc.png" alt="paccc">
+                     <img src="pg84345.png" alt="pg84345">
+                     <img src="sigma.png" alt="sigma">
+                     <img src="tadda343.png" alt="tadda343">
+                     <img src="VPOWER.png" alt="VPOWER">
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer_top">
+                <div class="footer_links">
+                    <div class="links_1">
+                        <img src="GamePologo.png" alt="">
+                        <p>GamePo.co is a community-based official site offering the best online casino experience to its players!<br />At GamePo.co, we believe that modern technology will forever transform the online gambling industry.</p>
+                    </div>
+                    <div class="links_2">
+                        <div>
+                            <a href="https://gamepo.co" target="_blank">Join Now</a>
+                        </div>
+                        <div>
+                            <a href="https://t.me/gamepo8" target="_blank">Telegram</a>
+                        </div>
+                        <div>
+                            <a href="https://t.me/gamepoofficial" target="_blank">News</a>
+                        </div>
+                    </div>
+                    <div class="links_3">
+                        <div class="links3_business">
+                            <span>Business:</span>
+                            <a target="_blank" href="https://gamepo.co">gamepo.co</a>
+                        </div>
+                        <div class="links3_business">
+                            <span>Bantuan:</span>
+                            <a target="_blank" href="https://direct.lc.chat/16937217/6">24H-Support</a>
+                        </div>
+                        <div class="links3_icon">
+                            <a href="https://www.facebook.com/gamepo.official" target="_blank">
+                                <img src="facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://t.me/gamepoofficial" target="_blank">
+                                <img src="telegram.png" alt="Telegram">
+                            </a>
+                            <a href="https://www.instagram.com/gamepo.officialac" target="_blank">
+                                <img src="instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_center">
+                    <div class="center_1">
+                        <img src="lic.png" alt="License">
+                        <div>
+                            GamePo.co is operated by BlockDance B.V. Commercially registered in Curaçao under number 158182, Located at Emancipatie Boulevard Dominico F. "Don" Martina 31, Curaçao. Licensed and regulated under sub-license CIL in accordance with Master Gaming License #5536/JAZ.
+                        </div>
+                    </div>
+                    <div class="center_2">
+                        <img src="bot1.png" alt="">
+                        <img src="bot2.png" alt="">
+                        <img src="bot3.png" alt="">
+                        <img src="bot4.png" alt="">
+                    </div>
+                </div>
+                <div class="footer_lic">
+                   ©2025 GamePo. All rights reserved.
+                </div>
+            </div>
+        </footer>
     </div>
-    <img src="GamePologo.png" alt="Gamepo Logo" class="logo" />
-  </div>
-
-  <div class="container">
-    <ul class="mirror-list">
-      <li><a href="https://gamepo11.com" target="_blank">https://gamepo11.com</a><span class="verified">✔ Verified</span></li>
-      <li><a href="https://gamepo1.net" target="_blank">https://gamepo1.net</a><span class="verified">✔ Verified</span></li>
-      <li><a href="https://gamepo1.live" target="_blank">https://gamepo1.live</a><span class="verified">✔ Verified</span></li>
-      <li><a href="https://gamepo.co" target="_blank">https://gamepo.co</a><span class="verified">✔ Verified</span></li>
-    </ul>
-
-    <a href="https://file.gamepo.com/upload/apps/gamepo-110.apk" target="_blank">
-      <img src="gamepoDownload.png" alt="Download Gamepo App" class="download-image" />
-    </a>
-  </div>
-
-  <div class="extra-content">
-    <h2>A Wide Selection of Slots</h2>
-    <p>Enjoy a diverse range of slot games from around the world, featuring exciting betting options for every type of player.</p>
-
-    <h2>Fast Payouts</h2>
-    <p>We prioritise quick and reliable payments. Your money and winnings are handled with the utmost care and responsibility.</p>
-
-    <h2>We Care</h2>
-    <p>Friendly technical support, top-tier security, and partnerships with the best global game providers—because your experience matters.</p>
-
-    <div class="providers">
-      <img src="yggdrasi.png" alt="Yggdrasi">
-      <img src="AVIATRIX.png" alt="AVIATRIX">
-      <img src="BIGPOT.png" alt="BIGPOT">
-      <img src="bti.png" alt="bti">
-      <img src="evoplay.png" alt="evoplay">
-      <img src="FC.png" alt="FC">
-      <img src="igs6789.png" alt="igs6789">
-      <img src="JDB.png" alt="JDB">
-      <img src="jili.png" alt="jili">
-      <img src="Layer.png" alt="Layer">
-      <img src="logosexy.png" alt="logosexy">
-      <img src="paccc.png" alt="paccc">
-      <img src="pg84345.png" alt="pg84345">
-      <img src="sigma.png" alt="sigma">
-      <img src="tadda343.png" alt="tadda343">
-      <img src="VPOWER.png" alt="VPOWER">
-    </div>
-
-    <h2>What is GamePo.co?</h2>
-    <p>GamePo.co is a community-based official site offering the best online casino experience to its players!<br />At GamePo.co, we believe that modern technology will forever transform the online gambling industry.</p>
-
-    <h2>Connect with Us</h2>
-    <div class="social-buttons">
-      <a href="https://gamepo.co" target="_blank">Join Now</a>
-      <a href="https://t.me/gamepoofficial" target="_blank">Telegram</a>
-      <a href="https://www.instagram.com/gamepo.officialac?igsh=MWV5bjczMDg1dDEz&utm_source=qr" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/gamepo.official" target="_blank">Facebook</a>
-      <a href="https://direct.lc.chat/16937217/6" target="_blank">24H-Support</a>
-    </div>
-
-    <h2>License</h2>
-    <p>
-      <strong>GamePo.co is operated by BlockDance B.V.</strong><br />
-      Commercially registered in Curaçao under number 158182,<br />
-      Located at Emancipatie Boulevard Dominico F. "Don" Martina 31, Curaçao.<br />
-      Licensed and regulated under sub-license CIL in accordance with Master Gaming License #5536/JAZ.
-    </p>
-  </div>
-
-  <footer class="footer">
-    ©2025 GamePo. All rights reserved.
-  </footer>
-
-</body>
-</html>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93a712a8e942bd0c',t:'MTc0NjM1MjAwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+</body></html>
